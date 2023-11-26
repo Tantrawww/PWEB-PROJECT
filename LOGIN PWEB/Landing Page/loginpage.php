@@ -1,26 +1,20 @@
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $hostname = "localhost";
-        $user = "root";
-        $password = "";
-        $db_name = "projectweb";
-    
+$hostname = "localhost";
+$user = "root";
+$password = "";
+$db_name = "projectweb";
 
-        $koneksi = mysqli_connect($hostname, $user, $password, $db_name) or die("". mysqli_error($koneksi));
+$koneksi = mysqli_connect($hostname, $user, $password, $db_name) or die("". mysqli_error($koneksi));
 
-        $username = $_POST['username'];
-        $password1 = $_POST['password1'];
+$username = $_POST['username'];
+$password1 = $_POST['password1'];
 
-        if($username === 'username' && $password1 === 'password1') {
-            echo "<script>
-			alert('Login Berhasil');
-			window.location = 'loginpage.html';
-		    </script>";
-        
-        
-        }
-        else {
-            echo "Login Gabisa ANJENG";
-        }
-    }
-?>
+$query_sql = "SELECT * from user where username = '$username' AND password_user = '$password1'";
+
+$result = mysqli_query($koneksi, $query_sql);
+
+if (mysqli_num_rows($result) > 0) {
+    header("Location: landingpage.html");
+} else {
+    echo"<center><h1>Email atau Password salah.<h1>";
+}
