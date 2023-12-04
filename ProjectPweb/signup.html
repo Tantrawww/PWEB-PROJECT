@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tantra Jaya Trans</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url("LOGIN.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .background {
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+
+      .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .shape:first-child {
+        background: linear-gradient(#1845ad, #23a2f6);
+        left: -80px;
+        top: -80px;
+      }
+
+      .shape:last-child {
+        background: linear-gradient(to right, #ff512f, #f09819);
+        right: -30px;
+        bottom: -80px;
+      }
+
+      form {
+        height: 600px;
+        width: 420px;
+        background-color: rgba(111, 108, 108, 0.07);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(111, 108, 108, 0.07);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+      }
+
+      form * {
+        font-family: "Poppins", sans-serif;
+        color: #000000;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+      }
+
+      form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      input {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      ::placeholder {
+        color: #2c2c2c;
+      }
+
+      button {
+        margin-top: 50px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #1500ff;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1500ff;
+        color: #ffffff;
+      }
+      .signin-link {
+        display: block;
+        margin-top: 10px;
+        color: #002aff;
+        text-decoration: none;
+        font-size: 14px;
+        text-align: center;
+      }
+      .signin-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form action="signup.php" method="POST">
+      <h3>Daftar</h3>
+
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Email or Phone"
+        id="username"
+        required="yes"
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password1"
+        placeholder="Password"
+        id="password"
+        required="yes"
+      />
+
+      <label for="confirm_password">Confirm Password</label>
+      <input
+        type="password"
+        name="password2"
+        placeholder="Confirm Password"
+        id="confirm_password"
+        required=""
+      />
+
+      <button type="submit" name="submit">Daftar</button>
+      <a href="loginpage.html" class="signin-link">Masuk</a>
+    </form>
+  </body>
+</html>

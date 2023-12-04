@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tantra Jaya Trans</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!--===========Nav Bar=================-->
+    <section class="nav-bar">
+      <div class="logo">Tantra Jaya Trans</div>
+      <ul class="menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-danger dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Profile
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="gantipass.html">Ganti Password</a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="deletepass.php">Hapus Akun</a></li>
+          <li><a class="dropdown-item" href="loginpage.html">Log Out</a></li>
+        </ul>
+      </div>
+    </section>
+    <!--===============Banner================-->
+    <section class="banner">
+      <div class="banner-text-item">
+        <div class="banner-heading">
+          <h1>Liburan Bersama Kami</h1>
+        </div>
+        <form class="form" method="POST" action="coba2.php">
+          <input
+            type="text"
+            name="mylist"
+            list="mylist"
+            placeholder="Mau Pergi Kemana . . ."
+          />
+          <select class="jenissewa" name="jenissewa">
+            <option value="" disabled selected>Masukkan Jenis Sewa</option>
+            <option value="harian">Harian</option>
+            <option value="mingguan">Mingguan</option>
+            <option value="bulanan">Bulanan</option>
+          </select>
+          <select class="jeniskendaraan" name="jeniskendaraan">
+            <option value="" disabled selected>Masukkan Jenis Kendaraan</option>
+            <option value="minibus">Minibus</option>
+            <option value="hiacecolt">Hiace / Colt</option>
+            <option value="mediumbus">Medium Bus</option>
+            <option value="bigbus">Big Bus</option>
+          </select>
+          <input type="date" name="date" class="date" />
+          <button type="submit" name="submit" class="book">
+            Pesan Sekarang
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2023 Tantra Jaya Trans
+  </footer>
+  
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*========================Nav Bar=========================*/
+  .nav-bar {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 90px;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 3px 3px 10px lightslategray;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: Satisfy;
+  }
+
+  ul.menu {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .menu li {
+    flex: 1;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "Barlow Condensed";
+    text-align: center;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .menu li a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+
+  .btn-group {
+    flex: 1;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: #007bff;
+  }
+
+  .dropdown-item {
+    font-family: sans-serif;
+  }
+
+  /*=============================Banner=============================*/
+  .banner {
+    background-image: url("WISATA-BAlI.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*overflow: hidden;*/
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    /*background-size: 100%;*/
+  }
+
+  .banner-text-item {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-heading {
+    flex: 1;
+  }
+
+  .banner-heading h1 {
+    font-size: 100px;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: Satisfy;
+  }
+
+  .banner-text-item .form {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 70%;
+    padding: 1% 2%;
+  }
+
+  .banner-text-item input,
+  .banner-text-item .date,
+  .banner-text-item .book {
+    padding: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+  }
+
+  .banner-text-item input {
+    width: 50%;
+    flex: 2;
+  }
+
+  .banner-text-item .date {
+    width: 20%;
+    flex: 1;
+    padding: 15px;
+  }
+
+  .banner-text-item .book {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    font-size: 16px;
+    font-family: "Barlow Condensed";
+    width: 18%;
+
+  }
+
+  .banner-text-item .jenissewa {
+    width: 20%;
+    flex: 2;
+    padding: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+  }
+
+  .banner-text-item .jenissewa option {
+    color: #000;
+  }
+
+  .banner-text-item .jeniskendaraan {
+    width: 20%;
+    flex: 2;
+    padding: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+  }
+
+  .banner-text-item .jeniskendaraan option {
+    color: #000;
+  }
+
+  footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+</style>
